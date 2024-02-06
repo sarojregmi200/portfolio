@@ -1,0 +1,60 @@
+/* Importing fonts from google */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --standard-padding: 50px;
+    --page-max-width: 1200px;
+    --standard-radius: 5px;
+    --base-font-size: 16px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Serif', serif;
+    font-size: var(--base-font-size);
+}
+
+.warningNav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-inline: var(--standard-padding);
+    padding-block: 20px;
+    background: #ffcd3a;
+    color: #886701;
+    font-weight: normal;
+    font-size: 1.3rem;
+}
+
+.downloadCv {
+    border-radius: var(--standard-radius);
+    padding: 10px 20px;
+    background: #ffcd3a;
+    text-transform: uppercase;
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    color: #886701;
+    font-weight: normal;
+    box-shadow: 20px 25px 20px rgba(0, 0, 0, 0.15);
+    transition: 0.25s ease-in-out;
+}
+
+.downloadCv:hover,
+.downloadCv:active,
+.downloadCv:focus {
+    box-shadow: 15px 20px 20px rgba(0, 0, 0, 0.20);
+    transform: translatey(5px);
+}
+
+.downloadCv .text {
+    margin-left: 10px;
+}
