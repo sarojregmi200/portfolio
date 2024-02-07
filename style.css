@@ -97,6 +97,12 @@ body {
     margin-inline: auto;
 }
 
+@media only screen and (max-width: 720px) {
+    .me {
+        font-size: 3rem;
+    }
+}
+
 .show {
     width: 90%;
     max-width: 1200px;
