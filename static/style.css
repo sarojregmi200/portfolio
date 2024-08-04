@@ -1,0 +1,180 @@
+/* Importing fonts from google */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+
+    /* padding */
+    --small-padding: 20px;
+    --standard-padding: 50px;
+
+    /* spacing */
+    --standard-spacing: 50px;
+    --small-spacing: 20px;
+
+    /* other sizes */
+    --page-max-width: 1200px;
+    --standard-radius: 5px;
+
+
+    /* font sizes */
+    --base-font-size: 16px;
+
+    /* colors */
+    --bg-yellow: #F9ECA9;
+    --c-font-title: #444;
+    --c-warning-font: #886701;
+    --c-font-para: #444d;
+    --c-icons: #4449;
+    --c-divider: #4443;
+    --c-link: #0A66C2;
+
+    /* font */
+    --font-family: 'Noto Serif', serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: var(--base-font-size);
+}
+
+.warningNav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-block: 20px;
+    color: var(--c-warning-font);
+    font-weight: normal;
+    font-size: 1.3rem;
+}
+
+.warningNavWrapper {
+    background: var(--bg-yellow);
+    width: 100%;
+}
+
+.downloadCv {
+    border-radius: var(--standard-radius);
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    color: #886701;
+    font-weight: normal;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+    opacity: 0.8;
+}
+
+.downloadCv:hover,
+.downloadCv:active,
+.downloadCv:focus {
+    opacity: 1;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+    transition: 0.25s ease-in-out;
+}
+
+.downloadCv .text {
+    margin-left: 10px;
+}
+
+.me {
+    margin-block: var(--standard-spacing);
+    width: 90%;
+    max-width: 1200px;
+    font-size: 5rem;
+    color: var(--c-font-title);
+    margin-inline: auto;
+}
+
+@media only screen and (max-width: 720px) {
+    .me {
+        font-size: 3rem;
+    }
+}
+
+.show {
+    width: 90%;
+    max-width: 1200px;
+    margin-block: var(--standard-spacing);
+    margin-inline: auto;
+}
+
+.show>.title {
+    font-size: 2rem;
+    color: var(--c-font-title);
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+.showItems {
+    margin-top: var(--small-spacing);
+}
+
+.item+.item {
+    margin-top: var(--small-spacing)
+}
+
+.item:not(.item:nth-last-child(1)) {
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--c-divider);
+}
+
+.showItems .item .title {
+    font-size: 1.5rem;
+    color: var(--c-font-title);
+}
+
+.links {
+    margin-top: calc(var(--small-spacing)/4);
+}
+
+.showItems .item .link {
+    text-decoration: none;
+    color: var(--c-icons);
+    font-size: 1.2rem;
+}
+
+.showItems .item .link:hover {
+    color: var(--c-font-title);
+}
+
+.showItems .item .desc {
+    text-decoration: none;
+    color: var(--c-font-para);
+    font-size: 1.2rem;
+    margin-top: calc(var(--small-spacing) /2);
+}
+
+.showItems .item .desc ul {
+    list-style-position: inside;
+    margin-top: calc(var(--small-spacing) /2);
+    list-style-type: disc;
+}
+
+.divider {
+    background: var(--c-divider);
+    height: 2px;
+    width: 100%;
+    max-width: 1200px;
+    margin-inline: auto;
+}
+
+.mainLink {
+    text-decoration: none;
+    font-family: var(--font-family);
+    font-size: 0.9rem;
+    color: var(--c-link);
+    font-style: italic;
+    font-weight: normal;
+}
