@@ -1,10 +1,6 @@
 <script lang="ts">
-	let { children } = $props();
+    let { children } = $props();
+    import "../app.css";
 </script>
 
-
-<div class="app">
-	<main>
-		{@render children()}
-	</main>
-</div>
+{@render children()}
