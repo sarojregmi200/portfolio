@@ -1,0 +1,18 @@
+[Unit]
+Description=Portfolio
+After=network.target
+
+[service]
+WorkingDirectory=/home/deploy/production/
+ExecStart=/usr/bin/bun /home/deploy/production/build/index.js
+User=deploy
+Group=deploy
+Restart=on-failure
+RestartSec=10
+ProtectSystem=full
+NoNewPrivileges=true
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
