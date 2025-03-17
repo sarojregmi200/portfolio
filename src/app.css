@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 :root {
-    --background: #C4C4C4;
+    --background: #F7FAFF;
     --foreground: #CECECE;
 
     --muted: hsl(210 40% 96.1%);
@@ -32,9 +32,9 @@
     --ring: hsl(222.2 84% 4.9%);
 
     --heading: #16181B;
-    --bq: #F7F7F7;
-    --p: #C4C4C4;
-    --h: #CECECE;
+    --bq: #6F6F6F;
+    --p: #424446;
+    --h: #24272C;
 }
 
 @media (prefers-color-scheme: dark) {
