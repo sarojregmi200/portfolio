@@ -4,7 +4,7 @@ After=network.target
 
 [service]
 WorkingDirectory=/home/deploy/production/
-ExecStart=/usr/bin/bun /home/deploy/production/build/index.js
+ExecStart=home/deploy/.bun/bin/bun /home/deploy/production/build/index.js
 User=deploy
 Group=deploy
 Restart=on-failure
