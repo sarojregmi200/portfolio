@@ -1,4 +1,3 @@
-runs-on: ubuntu-latest
 name: Deploy portfolio
 on:
   push:
