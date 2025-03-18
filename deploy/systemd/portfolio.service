@@ -2,9 +2,9 @@
 Description=Portfolio
 After=network.target
 
-[service]
+[Service]
 WorkingDirectory=/home/deploy/production/
-ExecStart=home/deploy/.bun/bin/bun /home/deploy/production/build/index.js
+ExecStart=/home/deploy/.bun/bin/bun /home/deploy/production/build/index.js
 User=deploy
 Group=deploy
 Restart=on-failure
