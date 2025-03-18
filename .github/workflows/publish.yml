@@ -1,5 +1,5 @@
 name: Deploy portfolio
-on:
+on: 
   push:
     branches:
       - main
@@ -7,20 +7,21 @@ jobs:
   build:
     name: setup, build and deploy
     runs-on: ubuntu-latest
+
     steps:
       - name: pulling repo. 
-      - uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: setting up bun.
-      - uses: oven-sh/setup-bun@v2
+        uses: oven-sh/setup-bun@v2
         with:
           bun-version: latest
 
       - name: installing dependencies.
-      - run: bun install
+        run: bun install
 
       - name: build
-      - run: bun run build
+        run: bun run build
 
       - name: Copying the files to the server using rsync.
         env:
@@ -36,5 +37,3 @@ jobs:
           ssh-keyscan -H $HOST >> ~/.ssh/known_hosts
           rsync -avz --delete -e "ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" --rsync-path="mkdir -p $REMOTE_DIR && rsync" ./build/ $USERNAME@$HOST:$REMOTE_DIR
           rm -rf ~/.ssh/id_rsa
-
-
