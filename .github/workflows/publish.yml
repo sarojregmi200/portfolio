@@ -28,12 +28,18 @@ jobs:
           HOST: ${{ secrets.HOST }}
           USERNAME: ${{ secrets.USERNAME }}
           DEPLOY_KEY: ${{ secrets.DEPLOY_USER_SSH_KEY }}
-          REMOTE_DIR: ${{ secrets.REMOTE_DIR }}
+          REMOTE_DIR: ${{ secrets.REMOTE_RELEASE_DIR }}
         run: |
           mkdir -p ~/.ssh/
           echo "$DEPLOY_KEY" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
 
           ssh-keyscan -H $HOST >> ~/.ssh/known_hosts
-          rsync -avz --delete -e "ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" --rsync-path="mkdir -p $REMOTE_DIR && rsync" ./build/ $USERNAME@$HOST:$REMOTE_DIR
+
+          # Copying the files to the server using rsync.
+          rsync -avz --delete -e "ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" --rsync-path="mkdir -p $REMOTE_DIR/${GITHUB_SHA} && rsync" ./build/ $USERNAME@$HOST:$REMOTE_DIR
+
+          # Executing the deployment script on the server.
+          ssh -i ~/.ssh/id_rsa $USERNAME@$HOST "bash -s" < deploy/deploy.sh $GITHUB_SHA $REMOTE_DIR
+
           rm -rf ~/.ssh/id_rsa
