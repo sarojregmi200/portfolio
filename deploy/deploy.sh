@@ -30,6 +30,7 @@ fi
 ln -sf $RELEASE_DIR $SITE_DIR/current
 
 # Restarting the release.
+echo "Restarting ${SERVICE_NAME} service."
 sudo systemctl restart ${SERVICE_NAME}
 echo "Restarted ${SERVICE_NAME} service."
 
