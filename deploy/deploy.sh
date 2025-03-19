@@ -27,7 +27,7 @@ if [ ! -d "$RELEASE_DIR" ]; then
 fi
 
 # Promoting the current release to production. 
-ln -sf $RELEASE_DIR $SITE_DIR/current
+ln -sf $RELEASE_DIR $SITE_DIR/production
 
 # Restarting the release.
 echo "Restarting ${SERVICE_NAME} service."
