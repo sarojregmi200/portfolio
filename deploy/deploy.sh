@@ -43,10 +43,7 @@ rollback() {
         ln -sfn $PREVIOUS_RELEASE $PRODUCTION_DEPLOY_DIR
     else
         echo "No previous release found, skipping rollback."
-        exit 1
     fi
-
-    echo "Rollback completed."
 
     # Restarting After waiting for some time.
     sleep 10
@@ -54,6 +51,8 @@ rollback() {
     for port in "$PORTS[@]"; do
         sudo systemctl restart "portfolio@$port"
     done
+
+    echo "Rollback completed."
 }
 
 
