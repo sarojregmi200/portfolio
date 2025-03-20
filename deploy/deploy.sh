@@ -48,13 +48,12 @@ rollback() {
     # Restarting After waiting for some time.
     sleep 10
 
-    for port in "$PORTS[@]"; do
+    for port in $PORTS[@]; do
         sudo systemctl restart "portfolio@$port"
     done
 
     echo "Rollback completed."
 }
-
 
 # Promoting the current release to production. 
 ln -sf $RELEASE $SITE_DIR/production
@@ -87,7 +86,7 @@ restart_services() {
     echo "Restarted ${SERVICE_NAME} service."
 }
 
-for port in "$PORTS[@]"; do
+for port in $PORTS[@]; do
     restart_services $port
 done
 
