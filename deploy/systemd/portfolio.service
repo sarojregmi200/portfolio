@@ -3,8 +3,8 @@ Description=Portfolio
 After=network.target
 
 [Service]
-WorkingDirectory=/home/deploy/production/
-ExecStart=/home/deploy/.bun/bin/bun /home/deploy/production/portfolio/build/index.js
+WorkingDirectory=/home/deploy/portfolio/
+ExecStart=bun production/build/index.js
 User=deploy
 Group=deploy
 Restart=on-failure

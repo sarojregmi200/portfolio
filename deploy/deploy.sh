@@ -30,8 +30,11 @@ fi
 ln -sf $RELEASE_DIR $SITE_DIR/production
 
 # Restarting the release.
-echo "Restarting ${SERVICE_NAME} service."
-sudo systemctl restart ${SERVICE_NAME}
-echo "Restarted ${SERVICE_NAME} service."
+for port in 3000 3001 3002; do
+    SERVICE_NAME="portfolio@$port"
+    echo "Restarting ${SERVICE_NAME} service."
+    sudo systemctl restart ${SERVICE_NAME}
+    echo "Restarted ${SERVICE_NAME} service."
+done
 
 echo "Deployment completed successfully."
