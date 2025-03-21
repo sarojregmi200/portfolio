@@ -56,7 +56,7 @@ rollback() {
 }
 
 # Promoting the current release to production. 
-ln -sf $RELEASE $SITE_DIR/production
+ln -sfn $RELEASE $SITE_DIR/production
 
 WAIT_TIME=5
 restart_services() {

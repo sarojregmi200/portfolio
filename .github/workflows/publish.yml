@@ -7,6 +7,11 @@ jobs:
   build:
     name: setup, build and deploy
     runs-on: ubuntu-latest
+    env:
+      HOST: ${{ secrets.HOST }}
+      USERNAME: ${{ secrets.USERNAME }}
+      DEPLOY_KEY: ${{ secrets.DEPLOY_USER_SSH_KEY }}
+      SITE_DIR: ${{ secrets.SITE_DIR }}
 
     steps:
       - name: pulling repo. 
@@ -24,11 +29,6 @@ jobs:
         run: bun run build
 
       - name: Copying the files to the server using rsync.
-        env:
-          HOST: ${{ secrets.HOST }}
-          USERNAME: ${{ secrets.USERNAME }}
-          DEPLOY_KEY: ${{ secrets.DEPLOY_USER_SSH_KEY }}
-          SITE_DIR: ${{ secrets.SITE_DIR }}
         run: |
           mkdir -p ~/.ssh/
           echo "$DEPLOY_KEY" > ~/.ssh/id_rsa
@@ -39,9 +39,11 @@ jobs:
           echo "$GITHUB_SHA github sha"
 
           # Copying the files to the server using rsync.
-          rsync -avz --delete -e "ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" --rsync-path="mkdir -p $SITE_DIR/releases/$GITHUB_SHA && rsync" . $USERNAME@$HOST:$SITE_DIR/releases/$GITHUB_SHA
+          rsync -avz --delete -e -q --exclude=".git/*" "ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" --rsync-path="mkdir -p $SITE_DIR/releases/$GITHUB_SHA && rsync" . $USERNAME@$HOST:$SITE_DIR/releases/$GITHUB_SHA
 
+      - name: Deploying the new release.
+        run: |
           # Executing the deployment script on the server.
           ssh -i ~/.ssh/id_rsa $USERNAME@$HOST "bash -s" < deploy/deploy.sh $GITHUB_SHA $SITE_DIR
-
           rm -rf ~/.ssh/id_rsa
+
