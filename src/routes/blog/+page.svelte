@@ -15,7 +15,7 @@
 
     <Button
         on:click={() => {
-            goto("/blog/wp-automation-taught-me-somethings-fun");
+            goto("/blog/i automated whatsapp messages");
         }}
         class="mt-10"
     >

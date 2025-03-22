@@ -156,10 +156,19 @@
     }
 
     code {
-        @apply text-sm text-primary bg-muted rounded-md px-1 py-0.5 not-italic;
+        @apply text-xs text-neutral-500 bg-neutral-200 dark:bg-neutral-800 rounded-md px-1 py-0.5 not-italic break-keep inline-block;
     }
 
     a {
         @apply text-blue-500 dark:text-blue-300 underline-offset-4 hover:underline inline-block;
     }
+
+    [data-bold] {
+        font-weight: bold;
+    }
+}
+
+body {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
 }
