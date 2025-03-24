@@ -15,9 +15,12 @@
             <h3 id="background">Background, what and why?</h3>
             <p>
                 I one day received a request from a friend asking me to help
-                them send 350+ messages individually in whatsapp. I without
-                having a second thought said yes and starting working on this
-                seemingly simple task. That is where the journey began.
+                them send 350+ messages individually in whatsapp. For the
+                upcoming student election promotion. I without having a second
+                thought said yes and starting working on this seemingly simple
+                task. That is where the journey began. It had to be done within
+                the allowed time for promotion which was due to end at 12:00am
+                the day after I was informed.
             </p>
 
             <backquote>
@@ -161,6 +164,138 @@
                 day or else there was no point of this automation. Why? just read
                 the
                 <a href="#background">background</a> clearly.
+
+                <br />
+                <br />
+                While this task was not complicated, I had fun doing it. Thinking
+                i may require this in future I tried to make it as modular and generic
+                as I could have though of at that time. The code turned out to be
+                ok. It was working fine. After informing my friend about it, I told
+                her to send the phonenumbers and the message that was to be automated
+                but here comes the twist.
+            </p>
+        </div>
+
+        <div class="chunk flex flex-col gap-2.5">
+            <h3>The twist.</h3>
+            <p>
+                The numbers were in a printed sheet of paper whose photo was
+                taken from a mobile phone and converted into a pdf. At first I
+                thought let's just use
+                <a href="https://lens.google/">google lense</a> to copy the numbers
+                but it turned out to be pretty unreliable. Some numbers were being
+                recorgnized fine some were getting half recorgnized. Regardless I
+                was unable to use it due to reliablility issues.
+            </p>
+            <p>
+                So, I began searching a way to do this without potentially
+                exposing those personal details of 350+ people. I tried using
+                someone else's ocr script and got to same conclusion. It was
+                half good and half bad. There was no way I could write my own
+                OCR script since, I had only that day to complete the task.
+                After searching for around couple of hours and testing different
+                solutions. I came across a tool that amazed me. If you have been
+                doing OCR recently you may have heard of them, since they are
+                quite popular and good at what they do.
+            </p>
+            <p>
+                I am talking about non other than
+                <a href="https://unstract.com/" data-bold>unstract</a>. I tired
+                setting it up locally but was not able to make it work and since
+                it is opensourced and had some good metrics I tried the cloud
+                version. Man I was impressed, it's a good idea isn't it? Taking
+                your documents and performing OCR and giving the extracted data
+                to an LLM to further process it. I singned up for the free trial
+                of their cloud version. Went to prompt studio and created a
+                prompt by attaching a document and wrote.
+                <br />
+                <code data-style="block">
+                    Can you extract the name and phone numbers from this
+                    document?
+                    <br />
+                    <br />
+                    In the below mentioned format:
+                    <br />
+                    name:number
+                </code>
+                It took around 30-40 seconds and the results were just perfect. I
+                did manually check some of the results from the middle they were
+                just perfect. Not only that they also told me the token lenght and
+                how much price it would take to run it?
+            </p>
+            <backquote>
+                No this, is not a ads for unstract. It was my first time seeing
+                the tools and it really got me impressed.
+            </backquote>
+            <p>
+                <b>But,</b> As i scrolled passed the 150th result, the result
+                ended there. And the last few numbers were wrong (classic LLM
+                behavior, making fake facts and presenting proudly). Luckily,
+                for me I had the ablity to tweak the prompt I copied all the
+                correct data and then told it to generate only the missing ones.
+                It was giving good data that was correct but for some reason the
+                last page's data was not being generated correctly.
+
+                <br />
+                It made me question the entire data's reliablility. At that point
+                I suddenly remembered
+                <a href="https://ai.google.dev/competition"
+                    >Google AI Competition.</a
+                >
+                why you may ask? Because it introduced me to google Ai studio. And
+                I remembered it supporting images and documents and generating good
+                response.
+                <br />
+                so, I gave it a shot. It generated the data perfectly and it also
+                had a structured data option. Unlike unstract, it completly ignored
+                my requested structure and gave complete table's data. It was a valid
+                json response. so, It was fine for me. Sadly, enough it too got stuck
+                at the 150th result. I was starting to get frustrated and was getting
+                bored and said it to continue further.
+                <br />
+                <br />
+                Funnily enought, It did. and got stuck at around 250th result, I
+                said to move forward it did just that. It feels good when LLMs do
+                what you want them to do.
+
+                <br />
+                It was a funny and interesting experience which taught me a thing
+                or two and let me discovering some new tools.
+            </p>
+
+            <p>
+                After collecting the data, I put it in a file as a `javascript`
+                Made some changes to the code and called my friend to continue
+                sending messages. I did not want to send it through my personal
+                phone number. So, I told her to scan the QR code and link the
+                her Whatsapp with my device with was about to run the playwright
+                test.
+
+                <br />
+                <br />
+                It worked flawlessly. Quickly in around 10 minutes, messages were
+                sent. Response started coming saying thanks for sending a personal
+                message. I was happy to see that it was working as expected.
+
+                <br />
+                She told her other friend who was also participating in the elections
+                to scan the QR code as soon as they did the messages were being sent.
+                The reaction was just priceless it felt like magic they said.
+            </p>
+
+            <p>
+                Regardless, It was a fun experience. I would not have setup a
+                blog if it weren't for the urge to share what it felt like. I
+                mean automaticing some whatsapp messages is not that big of a
+                deal.
+
+                <b>
+                    But, As developers we often overlook the fact that what we
+                    do on a daily basis "may be beyond many peoples imagination
+                    and list of possible things."
+                </b>
+
+                Often making the things that we think simple magical for others.
             </p>
         </div>
     </div>

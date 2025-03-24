@@ -166,6 +166,10 @@
     [data-bold] {
         font-weight: bold;
     }
+
+    [data-style="block"] {
+        @apply p-2.5 block my-2.5
+    }
 }
 
 body {
