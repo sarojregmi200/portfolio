@@ -1,3 +1,25 @@
+<svelte:head>
+    <title>
+        Saroj Regmi | I Automated 300+ Whatsapp Messages for a friend.
+    </title>
+
+    <meta
+        name="description"
+        content="I used Playwright, Unstract and Google AI studio to automate some messages."
+    />
+
+    <meta
+        name="keywords"
+        content="automation, whatsapp, playwright, unstract, ocr, Google Ai Studio, Saroj Regmi"
+    />
+    <meta name="author" content="Saroj Regmi" />
+
+    <meta
+        property="og:title"
+        content="I Automated 300+ Whatsapp Messages for a friend."
+    />
+</svelte:head>
+
 <div class="content w-full max-w-3xl flex gap-20 flex-col mb-50">
     <div
         class="top_header flex flex-col gap-2.5 mt-20 items-center justify-center"
