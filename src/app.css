@@ -127,7 +127,7 @@
 
 @layer components {
     header {
-        @apply text-5xl font-black text-heading;
+        @apply text-4xl font-bold text-heading;
     }
 
     h1 {
@@ -144,6 +144,18 @@
 
     p {
         @apply text-sm font-normal text-p;
+    }
+
+    ol {
+        list-style-type: decimal;
+        list-style-position: inside;
+        @apply text-sm font-normal text-p;
+    }
+
+    ol li,
+    ul li {
+        text-indent: -2ch;
+        padding-left: 2ch;
     }
 
     backquote {
