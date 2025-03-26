@@ -1,7 +1,5 @@
 <svelte:head>
-    <title>
-        Saroj Regmi | I Automated 300+ Whatsapp Messages for a friend.
-    </title>
+    <title>Saroj Regmi | I Automated 350+ Whatsapp Messages.</title>
 
     <meta
         name="description"
@@ -14,78 +12,78 @@
     />
     <meta name="author" content="Saroj Regmi" />
 
-    <meta
-        property="og:title"
-        content="I Automated 300+ Whatsapp Messages for a friend."
-    />
+    <meta property="og:title" content="I Automated 350+ Whatsapp Messages." />
 </svelte:head>
 
 <div class="content w-full max-w-3xl flex gap-20 flex-col mb-50">
-    <div
-        class="top_header flex flex-col gap-2.5 mt-20 items-center justify-center"
-    >
-        <header>I Automated 300+ Whatsapp Messages for a friend.</header>
+    <div class="top_header flex flex-col gap-2.5 mt-20">
+        <header>I Automated 350+ Whatsapp Messages.</header>
         <p>
             I mean automating couple of hundreds of messages is not that big of
             a deal. But I was curious to see how it goes. Regardless it was a
             decent learning experience. That taught me many things.
         </p>
+
+        <p>Wed, Mar 26 2025</p>
     </div>
 
     <div class="article-body flex flex-col gap-10">
         <div class="chunk flex flex-col gap-2.5">
             <h3 id="background">Background, what and why?</h3>
             <p>
-                I one day received a request from a friend asking me to help
-                them send 350+ messages individually in whatsapp. For the
-                upcoming student election promotion. I without having a second
-                thought said yes and starting working on this seemingly simple
-                task. That is where the journey began. It had to be done within
-                the allowed time for promotion which was due to end at 12:00am
-                the day after I was informed.
+                I one day received a request from a friend asking me to help her
+                send 350+ whatsapp messages individually. For an upcoming
+                student election promotion. I without having a second thought
+                said yes and starting working on this <b>seemingly simple</b> task.
+                This is where a journey full of excitement and frustration began.
+                It had to be done within two days, from friday evening to saturday
+                till night 12:00am. since all promotions after saturday were prohibited.
             </p>
 
             <backquote>
-                I never planned to release this blog in the first place. I did
-                encounter some new and interesting finding which I wanted to
-                share. I tried sharing in Linkedin but quickly hit the
-                <code>max message</code> limit. So, after asking and thinking about
-                the pro plan. I came to conclusion setting a blog is a good idea.
-            </backquote>
-        </div>
-
-        <div class="chunk flex flex-col gap-2.5">
-            <h3>Tools and Technologies that I used</h3>
-            <p>
-                I have actually open sourced the code on github. If you are
-                curious then you can check it here.
+                I always wanted to have a personal blog but did not have time to
+                code one. Unfortunately, this time when I wanted to share my
+                experience I got slapped by <b>
+                    you exceeded max character limit message
+                </b>
+                in linkedin. And after searching for solutions, thinking of getting
+                a premium (trail that is) and talking to one of my friends. I decided
+                to invest some time and setup a blog and properly documenting this
+                experience.
+                <br />
+                I have actually open sourced the code for this blog and the project.
+                If you are curious then you can check it out here.
 
                 <a
                     href="https://github.com/sarojregmi200/wp-automation"
                     data-bold
                 >
-                    Repo Link
-                </a>
-            </p>
+                    Project
+                </a>,
 
+                <a href="https://github.com/sarojregmi200/portfolio" data-bold>
+                    Blog
+                </a>
+            </backquote>
+        </div>
+
+        <div class="chunk flex flex-col gap-2.5">
+            <h3>What did i use?</h3>
             <p>
-                After understanding the problem, I begain thinking about the
-                solutions that would:
+                After understanding the problem, I began thinking about the
+                possible solutions that would:
             </p>
 
             <ol start="1">
                 <li>
                     Work flawlessly, since I had to send only a single message
-                    to individual numbers who may or may be not connected to my
-                    friend.
+                    to individual phone numbers who may or maynot be connected
+                    to my friend.
                 </li>
                 <li>
                     Work automatically, with minimal to no human intervention.
                 </li>
-                <li>
-                    Was doable within a day, since we usually have a single day
-                    weekend in our country.
-                </li>
+                <li>Was doable within 1.25~ days (an evening and a day).</li>
             </ol>
 
             <br />
