@@ -1,5 +1,5 @@
 name: Deploy portfolio
-on: 
+on:
   push:
     branches:
       - main
@@ -14,7 +14,7 @@ jobs:
       SITE_DIR: ${{ secrets.SITE_DIR }}
 
     steps:
-      - name: pulling repo. 
+      - name: pulling repo.
         uses: actions/checkout@v4
 
       - name: setting up bun.
@@ -44,4 +44,3 @@ jobs:
           # Executing the deployment script on the server.
           ssh -i ~/.ssh/id_rsa $USERNAME@$HOST "bash -s" < deploy/deploy.sh $GITHUB_SHA $SITE_DIR
           rm -rf ~/.ssh/id_rsa
-
