@@ -6,7 +6,7 @@
 
 <Button.Root
 	class={cn(
-		`rounded-input bg-foreground rounded-md text-white shadow-mini hover:bg-foreground/80 inline-flex
+		`rounded-input dark:bg-foreground bg-primary rounded-md text-white shadow-mini hover:bg-foreground/80 inline-flex
 	h-max w-max py-2 px-4 items-center justify-center text-sm
 	font-semibold active:scale-[0.95] active:transition-all`,
 		className

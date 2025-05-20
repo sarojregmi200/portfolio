@@ -8,8 +8,8 @@
 </svelte:head>
 
 <div class="sm:p-20 p-5 space-y-5 flex flex-col gap-2.5 justify-center h-screen">
-	<sm class="text-xl text-white">Hey It's Me Saroj</sm>
-	<ul class="dark:text-white text-gray-500 text-5xl flex flex-col gap-2.5">
+	<sm class="text-xl dark:text-white text-neutral-500">Hey It's Me Saroj</sm>
+	<ul class="dark:text-white text-neutral-800 text-6xl flex flex-col gap-2.5">
 		<li>A developer for fun,</li>
 		<li>desinger by needs,</li>
 		<li>Linux and Vim user by heart.</li>
