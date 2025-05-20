@@ -12,24 +12,24 @@
 		"lint": "prettier --check ."
 	},
 	"devDependencies": {
-		"@sveltejs/kit": "^2.20.2",
+		"@sveltejs/kit": "^2.21.1",
 		"@sveltejs/vite-plugin-svelte": "^5.0.3",
 		"bits-ui": "0.22.0",
 		"clsx": "^2.1.1",
-		"prettier": "^3.4.2",
-		"prettier-plugin-svelte": "^3.3.3",
-		"svelte": "^5.25.3",
+		"prettier": "^3.5.3",
+		"prettier-plugin-svelte": "^3.4.0",
+		"svelte": "^5.31.1",
 		"svelte-adapter-bun": "^0.5.2",
-		"svelte-check": "^4.1.5",
-		"tailwind-merge": "^3.0.2",
+		"svelte-check": "^4.2.1",
+		"tailwind-merge": "^3.3.0",
 		"tailwind-variants": "^1.0.0",
-		"typescript": "^5.8.2",
-		"vite": "^6.2.2"
+		"typescript": "^5.8.3",
+		"vite": "^6.3.5"
 	},
 	"type": "module",
 	"dependencies": {
-		"@tailwindcss/vite": "^4.0.14",
-		"posthog-js": "^1.236.1",
-		"tailwindcss": "^4.0.14"
+		"@tailwindcss/vite": "^4.1.7",
+		"posthog-js": "^1.245.0",
+		"tailwindcss": "^4.1.7"
 	}
 }
