@@ -316,8 +316,3 @@
 		</div>
 	</div>
 </article>
-
-<style>
-	@reference "../../app.css";
-	@import '../../blog.css';
-</style>
