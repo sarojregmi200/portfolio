@@ -37,10 +37,4 @@ jobs:
           ssh-keyscan -H $HOST >> ~/.ssh/known_hosts
 
           # Copying the files to the server using rsync.
-          rsync -avz --delete -e "ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" --rsync-path="mkdir -p $SITE_DIR/releases/$GITHUB_SHA && rsync -q" . $USERNAME@$HOST:$SITE_DIR/releases/$GITHUB_SHA
-
-      - name: Deploying the new release.
-        run: |
-          # Executing the deployment script on the server.
-          ssh -i ~/.ssh/id_rsa $USERNAME@$HOST "bash -s" < deploy/deploy.sh $GITHUB_SHA $SITE_DIR
-          rm -rf ~/.ssh/id_rsa
+          rsync -avz --delete -e "ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" --rsync-path="mkdir -p $SITE_DIR/releases/$GITHUB_SHA && rsync -q" build/ $USERNAME@$HOST:$SITE_DIR/releases/$GITHUB_SHA
