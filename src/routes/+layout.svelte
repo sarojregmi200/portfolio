@@ -10,7 +10,7 @@
 		if (browser) {
 			posthog.init('phc_B2YTvdI7h8z7lQPQ1KYTx1qYxAiGUuSpS0KjmAmb9tJ', {
 				api_host: 'https://us.i.posthog.com',
-				person_profiles: 'identified_only' 
+				person_profiles: 'identified_only'
 			});
 		}
 	});

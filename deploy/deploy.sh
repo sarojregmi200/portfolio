@@ -19,6 +19,7 @@ COMMIT_HASH=$1
 SITE_DIR=$2
 RELEASE="$SITE_DIR/releases/$COMMIT_HASH"
 PRODUCTION_DEPLOY_DIR="$SITE_DIR/production"
+
 declare -a PORTS=("3000" "3001" "3002")
 
 # Checking if the release exists in the release directory.
