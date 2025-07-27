@@ -5,6 +5,5 @@
 {@render children()}
 
 <style>
-	@import '../../blog.css';
-	@reference "../../app.css";
+  @import '../../blog.css';
 </style>

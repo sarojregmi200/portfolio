@@ -39,6 +39,7 @@ backquote::before {
   @apply absolute top-0 left-0 text-xl font-bold text-orange-400;
 }
 
+
 code {
   @apply text-xs text-neutral-500 bg-neutral-200 dark:bg-neutral-800 rounded-md px-1 py-0.5 not-italic break-keep inline-block;
 }
