@@ -12,7 +12,7 @@
 		class="flex flex-col gap-1 text-left text-3xl text-neutral-800 sm:gap-2.5 sm:text-6xl dark:text-white"
 	>
 		<li>A developer for fun,</li>
-		<li>desinger by needs,</li>
+		<li>designer by needs,</li>
 		<li>Linux and Vim user by heart.</li>
 	</ul>
 
