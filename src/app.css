@@ -181,6 +181,10 @@
 	[data-style='block'] {
 		@apply p-2.5 block my-2.5;
 	}
+
+  landing {
+    @apply h-[75vh] flex items-center justify-center flex-col **:w-full ; 
+  }
 }
 
 body {

@@ -1,9 +1,16 @@
+---
+  title: Saroj Regmi | I Automated 350+ Whatsapp Messages.
+  author: Saroj Regmi
+  date: Wed, Mar 26 2025
+  intro: I used Playwright, Unstract and Google AI studio to automate some messages.
+---
+
 <svelte:head>
 <title>Saroj Regmi | I Automated 350+ Whatsapp Messages.</title>
 
 <meta
-name="description"
-content="I used Playwright, Unstract and Google AI studio to automate some messages."
+  name="description"
+  content="I used Playwright, Unstract and Google AI studio to automate some messages."
 />
 
 <meta
@@ -14,16 +21,6 @@ content="automation, whatsapp, playwright, unstract, ocr, Google Ai Studio, Saro
 
 <meta property="og:title" content="I Automated 350+ Whatsapp Messages." />
 </svelte:head>
-
-# I Automated 350+ Whatsapp Messages.
-
-
-I mean automating couple of hundreds of messages is not that big of a deal. But I was
-curious to see how it goes. Regardless it was a decent learning experience. That taught me
-many things.
-
-<p>Wed, Mar 26 2025</p>
-
 
 
 ### Background, what and why?
