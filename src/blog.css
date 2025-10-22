@@ -1,3 +1,5 @@
+@import 'tailwindcss';
+
 header {
   @apply text-4xl font-bold text-heading;
 }

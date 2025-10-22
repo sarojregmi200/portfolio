@@ -1,5 +1,5 @@
 ---
-  title: Saroj Regmi | I Automated 350+ Whatsapp Messages.
+  title: I Automated 350+ Whatsapp Messages.
   author: Saroj Regmi
   date: Wed, Mar 26 2025
   intro: I used Playwright, Unstract and Google AI studio to automate some messages.
