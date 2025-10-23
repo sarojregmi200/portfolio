@@ -168,10 +168,12 @@
 
 	code {
 		@apply text-xs text-neutral-500 bg-neutral-200 dark:bg-neutral-800 rounded-md px-1 py-0.5 not-italic break-keep inline-block;
+    text-wrap: wrap;
+    max-width: calc(100vw - 50px);
 	}
 
 	a {
-		@apply text-blue-500 dark:text-blue-300 underline-offset-4 hover:underline inline-block;
+		@apply text-p underline-offset-4 inline-block dark:decoration-blue-300 decoration-blue-500 decoration-1 decoration-wavy underline;
 	}
 
 	[data-bold] {
