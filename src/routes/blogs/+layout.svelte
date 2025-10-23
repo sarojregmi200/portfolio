@@ -3,7 +3,3 @@
 </script>
 
 {@render children()}
-
-<style>
-  @import '../../blog.css';
-</style>

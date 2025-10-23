@@ -1,10 +1,13 @@
 <script>
-	export let title,
+	import h3 from '$lib/components/h3.svelte';
+	let title,
 		author = 'Saroj Regmi',
 		date,
 		intro,
 		cover_img,
 		keywords;
+
+	export { h3, title, author, date, intro, cover_img, keywords };
 </script>
 
 <svelte:head>
@@ -31,21 +34,21 @@
 			{title}
 		</header>
 
-		<p class="intro my-5">
+		<p class="intro my-5!">
 			{intro}
 		</p>
 
-		<div class="right ml-auto flex w-max! flex-col text-right">
+		<p class="right ml-auto flex w-max! flex-col text-right">
 			{#if author}
-				<p class="author font-bold">
+				<span class="author font-bold">
 					{author}
-				</p>
+				</span>
 			{/if}
 
-			<p class="date text-xs">
+			<span class="date text-xs">
 				- {date}
-			</p>
-		</div>
+			</span>
+		</p>
 	</section>
 
 	<slot></slot>
