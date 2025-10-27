@@ -5,8 +5,8 @@ import { defineConfig } from 'vite';
 const PORT = import.meta.env?.PORT || 3000;
 
 export default defineConfig({
-  server: {
-    port: PORT
-  },
+	server: {
+		port: Number(PORT)
+	},
 	plugins: [tailwindcss(), sveltekit()]
 });
