@@ -38,6 +38,8 @@
 	"dependencies": {
 		"@sveltejs/adapter-static": "^3.0.10",
 		"@types/bun": "^1.3.0",
-		"posthog-js": "^1.278.0"
+		"posthog-js": "^1.278.0",
+		"rehype-autolink-headings": "^7.1.0",
+		"rehype-slug": "^6.0.0"
 	}
 }
