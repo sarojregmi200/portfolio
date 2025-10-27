@@ -1,13 +1,10 @@
 <script>
-	import h3 from '$lib/components/h3.svelte';
-	let title,
+	export let title,
 		author = 'Saroj Regmi',
 		date,
 		intro,
 		cover_img,
 		keywords;
-
-	export { h3, title, author, date, intro, cover_img, keywords };
 </script>
 
 <svelte:head>
@@ -53,3 +50,7 @@
 
 	<slot></slot>
 </article>
+
+<!-- 
+Add comment section with the github discussion.
+-->
