@@ -3,6 +3,7 @@
 
 	const { data }: PageProps = $props();
 	const blogs = data.blogs;
+  console.log(blogs);
 </script>
 
 <h1>Here are some blogs that you can check.</h1>

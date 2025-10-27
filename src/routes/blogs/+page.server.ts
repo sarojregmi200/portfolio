@@ -14,9 +14,10 @@ export const load = async () => {
 	for (let [blogFileName, fileModule] of Object.entries(globResponse)) {
 		const metadata = ((await fileModule()) as any).metadata;
 
+		// TODO: sort them with created date in desc order.
 		blogs.push({
 			fileName: blogFileName,
-			slug: basename(blogFileName, '.svx'),
+			slug: basename(blogFileName.replace('\/+page.svx', '')),
 			metadata
 		});
 	}
