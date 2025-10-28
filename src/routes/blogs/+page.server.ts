@@ -17,7 +17,7 @@ export const load = async () => {
 		// TODO: sort them with created date in desc order.
 		blogs.push({
 			fileName: blogFileName,
-			slug: basename(blogFileName.replace('\/+page.svx', '')),
+			slug: `/blogs/${basename(blogFileName.replace('\/+page.svx', ''))}`,
 			metadata
 		});
 	}
