@@ -1,10 +1,13 @@
 <script>
+	import CommentSection from '$lib/components/comment-section.svelte';
+
 	export let title,
 		author = 'Saroj Regmi',
 		date,
 		intro,
 		cover_img,
-		keywords;
+		keywords,
+		comments = true;
 </script>
 
 <svelte:head>
@@ -49,8 +52,8 @@
 	</section>
 
 	<slot></slot>
-</article>
 
-<!-- 
-Add comment section with the github discussion.
--->
+	{#if comments}
+		<CommentSection />
+	{/if}
+</article>
