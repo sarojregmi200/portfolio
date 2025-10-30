@@ -7,7 +7,10 @@ import mdsvexconfig from './mdsvex.config.ts';
 const config = {
 	extensions: ['.svelte', ...(mdsvexconfig.extensions ?? [])],
 	kit: {
-		adapter: adapter()
+		adapter: adapter(),
+    prerender: {
+      handleMissingId: 'ignore'
+    }
 	},
 	preprocess: [mdsvex(mdsvexconfig), vitePreprocess()]
 };

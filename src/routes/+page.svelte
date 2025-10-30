@@ -20,7 +20,7 @@
 		onclick={() => {
 			goto('/blogs/i automated whatsapp messages');
 		}}
-		class="self-end rounded-md bg-white/90 px-10 py-3 text-xl hover:bg-white/100 active:scale-96 hover:scale-105 transition-transform duration-75"
+		class="self-end rounded-md bg-white/90 px-10 py-3 text-xl transition-transform duration-75 hover:scale-105 hover:bg-white/100 active:scale-96"
 	>
 		Read a blog
 	</button>

@@ -9,6 +9,7 @@ type TBlog = {
 
 export const load = async () => {
 	const globResponse = import.meta.glob('./**/*.svx') ?? {};
+  console.log(globResponse);
 	const blogs: TBlog[] = [];
 
 	for (let [blogFileName, fileModule] of Object.entries(globResponse)) {
