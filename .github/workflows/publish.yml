@@ -26,7 +26,11 @@ jobs:
         run: bun install
 
       - name: build
-        run: bun run build
+        run: |
+          bun --version
+          which bun
+          bun run build
+
 
       - name: Copying the files to the server using rsync.
         run: |
@@ -37,4 +41,8 @@ jobs:
           ssh-keyscan -H $HOST >> ~/.ssh/known_hosts
 
           # Copying the files to the server using rsync.
-          rsync -avz --delete -e "ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" --rsync-path="mkdir -p $SITE_DIR/releases/$GITHUB_SHA && rsync -q" build/ $USERNAME@$HOST:$SITE_DIR/releases/$GITHUB_SHA
+          rsync \
+             -avz \
+             --delete \
+             -e "ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" \ 
+             --rsync-path="mkdir -p $SITE_DIR/releases/$GITHUB_SHA && rsync -q" build/ $USERNAME@$HOST:$SITE_DIR/releases/$GITHUB_SHA
