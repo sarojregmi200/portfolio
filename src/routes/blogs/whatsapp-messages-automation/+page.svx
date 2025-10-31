@@ -1,6 +1,6 @@
 ---
-  title: I Automated 350+ Whatsapp Messages.
-  intro: Automating couple of hundreds of messages is not that big of a deal. But I was curious to see how it goes. Regardless it was a decent learning experience. That taught me many things.
+  title: Automating 350+ Whatsapp Messages using playwright.
+  intro: Exploring automations playwright, Google AI studio, where seemingly simple task turned into a fun challenge.
   keywords: automation, whatsapp, playwright, unstract, ocr, Google Ai Studio, Saroj Regmi
   author: Saroj Regmi
   date: Wed, Mar 26 2025
@@ -102,7 +102,7 @@ unprepared.
 The numbers were in a printed sheet of paper whose photo was taken from a mobile phone
 and converted into a pdf.(simply put, the "PDF" was just a collection pictures.)
 
-At first I thought let's just use <a href="https://lens.google/">google lense</a> to copy the mobile numbers but it turned
+At first I thought let's just use <a href="https://lens.google/">Google Lens</a> to copy the mobile numbers but it turned
 out to be pretty unreliable. Some numbers were being recorgnized fine some were getting half
 recorgnized. Regardless I was unable to use it due to reliablility issues.
 
