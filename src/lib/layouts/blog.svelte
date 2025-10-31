@@ -16,6 +16,9 @@
 	<meta name="keywords" content={keywords} />
 	<meta name="author" content={author} />
 	<meta property="og:title" content={title} />
+	<meta property="giscus:title" content="testing:jaskdfldfj" />
+	<meta property="giscus:desctipion" content="testingdesc" />
+	<meta property="giscus:backlink" content="testinglink" />
 
 	{#if cover_img}
 		<meta property="og:image" content={cover_img} />
@@ -54,6 +57,8 @@
 	<slot></slot>
 
 	{#if comments}
-		<CommentSection />
+		<div class="mt-20">
+			<CommentSection />
+		</div>
 	{/if}
 </article>
