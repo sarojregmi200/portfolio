@@ -4,4 +4,5 @@ export type TBlogFrontMatter  = {
   keywords: string;
   author: string; 
   date: string; 
+  status?: "published" | "draft"
 }

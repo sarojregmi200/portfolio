@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import CommentSection from '$lib/components/comment-section.svelte';
 
 	export let title,
@@ -7,7 +7,8 @@
 		intro,
 		cover_img,
 		keywords,
-		comments = true;
+		comments = true,
+		status: 'draft' | 'published' = 'draft';
 </script>
 
 <svelte:head>

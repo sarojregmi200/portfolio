@@ -12,7 +12,9 @@ export const load = async () => {
 	const blogs: TBlog[] = [];
 
 	for (let [blogFileName, fileModule] of Object.entries(globResponse)) {
-		const metadata = ((await fileModule()) as any).metadata;
+		const metadata = ((await fileModule()) as any).metadata as TBlogFrontMatter;
+
+		if (metadata.status === 'draft' || metadata?.status === undefined) continue;
 
 		// TODO: sort them with created date in desc order.
 		blogs.push({
