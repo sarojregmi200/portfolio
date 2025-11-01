@@ -2,6 +2,7 @@
 	import type { PageProps } from './$types';
 	import { onVisiblityChange } from '$lib/hooks/visible';
 	import { preloadCode, preloadData } from '$app/navigation';
+	import { prettyDate } from '$lib/utils/date';
 
 	const { data }: PageProps = $props();
 	const blogs = data.blogs;
@@ -25,8 +26,10 @@
 
 <div class="wrapper mx-auto max-w-3xl px-5 py-10 sm:p-10">
 	{#if blogs.length === 0}
-		<h1>Sorry</h1>
-		<p>No blogs found!!</p>
+		<div class="flex h-screen flex-col items-center justify-center">
+			<h1>404</h1>
+			<p>No blogs found!!</p>
+		</div>
 	{:else}
 		<h1>Here are some blogs that you can check.</h1>
 		<div class="list mt-5">
@@ -36,7 +39,7 @@
 					{@attach onVisiblityChange((...props) => handleVisiblityChange(...props, blog.slug))}
 				>
 					<div class="date text-xs">
-						{blog.metadata.date}
+						{prettyDate(new Date(blog.metadata.date))}
 					</div>
 
 					<h1 class="title text-lg">

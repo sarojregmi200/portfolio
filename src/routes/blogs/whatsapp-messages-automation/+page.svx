@@ -3,7 +3,8 @@
   intro: Exploring automations playwright, Google AI studio, where seemingly simple task turned into a fun challenge.
   keywords: automation, whatsapp, playwright, unstract, ocr, Google Ai Studio, Saroj Regmi
   author: Saroj Regmi
-  date: Wed, Mar 26 2025
+  date: 2025-03-25 
+  status: published
 ---
 
 ### Background, what and why?

@@ -16,13 +16,26 @@ export const load = async () => {
 
 		if (metadata.status === 'draft' || metadata?.status === undefined) continue;
 
-		// TODO: sort them with created date in desc order.
 		blogs.push({
 			fileName: blogFileName,
 			slug: `/blogs/${basename(blogFileName.replace('\/+page.svx', ''))}`,
 			metadata
 		});
 	}
+
+	blogs.sort((a, b) => {
+		try {
+			const dateA = new Date(a.metadata.date);
+			const dateB = new Date(b.metadata.date);
+
+			if (dateA < dateB) return -1;
+			if (dateA > dateB) return 1;
+
+			return 0;
+		} catch {
+			return 0;
+		}
+	});
 
 	return {
 		blogs

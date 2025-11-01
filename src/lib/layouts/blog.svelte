@@ -1,5 +1,6 @@
 <script lang="ts">
 	import CommentSection from '$lib/components/comment-section.svelte';
+	import { prettyDate } from '$lib/utils/date';
 
 	export let title,
 		author = 'Saroj Regmi',
@@ -7,8 +8,9 @@
 		intro,
 		cover_img,
 		keywords,
-		comments = true,
-		status: 'draft' | 'published' = 'draft';
+		comments = true;
+
+	const formattedDate = prettyDate(new Date(date));
 </script>
 
 <svelte:head>
@@ -50,7 +52,7 @@
 			{/if}
 
 			<span class="date text-xs">
-				- {date}
+				- {formattedDate}
 			</span>
 		</p>
 	</section>
