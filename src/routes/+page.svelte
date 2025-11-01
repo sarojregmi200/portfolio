@@ -1,5 +1,10 @@
 <script>
-	import { goto } from '$app/navigation';
+	import { goto, preloadCode, preloadData } from '$app/navigation';
+	const handleMouseEnter = () => {
+		console.log('yooo');
+		preloadCode('/blogs');
+		preloadData('/blogs');
+	};
 </script>
 
 <svelte:head>
@@ -18,10 +23,11 @@
 
 	<button
 		onclick={() => {
-			goto('/blogs/i automated whatsapp messages');
+			goto('/blogs');
 		}}
-		class="self-end rounded-md bg-white/90 px-10 py-3 text-xl transition-transform duration-75 hover:scale-105 hover:bg-white/100 active:scale-96"
+		onmouseenter={handleMouseEnter}
+		class="self-end rounded-md bg-white/90 px-10 py-3 text-xl transition-transform duration-75 hover:scale-105 hover:bg-white active:scale-96"
 	>
-		Read a blog
+		Read blogs
 	</button>
 </div>
