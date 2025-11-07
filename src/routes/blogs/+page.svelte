@@ -32,7 +32,7 @@
 		</div>
 	{:else}
 		<h1>Here are some blogs that you can check.</h1>
-		<div class="list mt-5">
+		<div class="list mt-5 flex flex-col gap-2.5">
 			{#each blogs as blog}
 				<div
 					class="container rounded-md bg-muted p-2.5 text-muted-foreground"

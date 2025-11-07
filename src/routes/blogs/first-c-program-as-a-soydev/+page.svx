@@ -1,0 +1,44 @@
+---
+  title: First C program as a soydev. 
+  description: I had a problem that needed fixing it would have been ok to go with javascript but
+               I decided to go with C this time.
+  status: draft 
+  date: 2081-01-01
+---
+
+
+1. Talk about why i decided to go with C.
+    because one can really learn by doing.
+1. What actually did I make?
+1. How was the first impression as someone who actually codes.
+
+
+Added DAY 2;
+Experience notes:
+INStalling GDB:
+Installing gdb was amazing it just had a single configure command
+and you make it and then you install it.
+
+
+This was when i was trying to setup the lsp so, that I can get suggestions for the libraries functions that are available.
+    AArch64 sucks: there are no any prebuild binaries and building from source also fails due to x number of reasons. MOst amount of 
+    time spent is this. Took most of my day in office around 1/2 day for 2 days. It might be due to the fact it is fedora on Mac M2
+    Taught me about the Processor architecture what is X86, Why is it sometimes called AMD64 and what the fuck is up with ARM and why
+    AArch ????? Taught me things like this I learnt this why compiling llvm(for tools like Clangd, lld) and targeting my hardware with the flags. (will have to search 
+    when writing this blog).
+
+Got to know how the hell is the content of a file read and was facinated by the fact that it makes sense.
+since we don't have array of dynamic sizes we have to create a location in memory and take the file pointer and then
+make sure we move that file pointer to the last byte in process collecting the size required for the file content to fit in. 
+
+It really made sense, and now I can say I know how to read file in C.
+
+
+
+Using external library such as tree sitter taught me how does linking work. taught me thing like what is statically linked and what
+is dynamically linked and how can we specify those.
+
+
+This all made me realize, when you want to do things with C you will have to read alot. I mean alot. I have read alot in the past
+two things and yet I don't know how most the things are done, since I am not that comfortable reading and actually keeping that
+in my head in a office environment(Guess will have to learn that nicely.)
