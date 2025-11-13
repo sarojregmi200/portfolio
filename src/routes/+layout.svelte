@@ -5,6 +5,7 @@
 	import posthog from 'posthog-js';
 	import { browser } from '$app/environment';
 	import { onMount } from 'svelte';
+	import Cursor from '$lib/components/cursor.svelte';
 
 	onMount(() => {
 		if (browser) {
@@ -16,4 +17,7 @@
 	});
 </script>
 
-{@render children()}
+<div>
+  <Cursor />
+	{@render children()}
+</div>

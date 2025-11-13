@@ -7,3 +7,5 @@ export type TBlogFrontMatter = {
 	date: string;
 	status?: 'published' | 'draft';
 };
+
+export type TMousePosition = [xPosition: number, yPosition: number];

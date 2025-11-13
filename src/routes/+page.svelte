@@ -1,7 +1,6 @@
 <script>
 	import { goto, preloadCode, preloadData } from '$app/navigation';
 	const handleMouseEnter = () => {
-		console.log('yooo');
 		preloadCode('/blogs');
 		preloadData('/blogs');
 	};
