@@ -3,6 +3,7 @@
 	import { onVisiblityChange } from '$lib/hooks/visible';
 	import { preloadCode, preloadData } from '$app/navigation';
 	import { prettyDate } from '$lib/utils/date';
+	import { cn } from '$lib/utils/tailwind';
 
 	const { data }: PageProps = $props();
 	const blogs = data.blogs;
@@ -35,7 +36,10 @@
 		<div class="list mt-5 flex flex-col gap-2.5">
 			{#each blogs as blog}
 				<div
-					class="container rounded-md bg-muted p-2.5 text-muted-foreground"
+					class={cn(
+						`container rounded-md bg-muted p-2.5 text-muted-foreground`,
+						blog.metadata.status == 'draft' && 'border border-orange-200'
+					)}
 					{@attach onVisiblityChange((...props) => handleVisiblityChange(...props, blog.slug))}
 				>
 					<div class="date text-xs">

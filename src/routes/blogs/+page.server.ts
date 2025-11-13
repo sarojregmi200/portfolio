@@ -14,7 +14,8 @@ export const load = async () => {
 	for (let [blogFileName, fileModule] of Object.entries(globResponse)) {
 		const metadata = ((await fileModule()) as any).metadata as TBlogFrontMatter;
 
-		if (metadata.status === 'draft' || metadata?.status === undefined) continue;
+		if (import.meta.env.PROD)
+			if (metadata.status === 'draft' || metadata?.status === undefined) continue;
 
 		blogs.push({
 			fileName: blogFileName,

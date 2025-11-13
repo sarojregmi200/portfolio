@@ -42,3 +42,7 @@ is dynamically linked and how can we specify those.
 This all made me realize, when you want to do things with C you will have to read alot. I mean alot. I have read alot in the past
 two things and yet I don't know how most the things are done, since I am not that comfortable reading and actually keeping that
 in my head in a office environment(Guess will have to learn that nicely.)
+
+
+Day 3 notes:
+After a long time I am completely lost I know tree-sitter can be used to do some coolshits, but I am not really sure this can be done or not.
